@@ -16,7 +16,7 @@
 #define BYTES_PER_PIXEL 4
 #define PIXELS_SIZE PIXELS * BYTES_PER_PIXEL
 #define PIXEL_DIV 1024
-#define MAX_ITERS 200
+#define MAX_ITERS 1000
 #define MOVE_SPEED 10
 #define KEY_ESC 27
 #define UP 119
@@ -55,7 +55,7 @@ void update_image(uint8_t *image, double *x, double *y, double *zoom) {
         float H = iters / MAX_ITERS * 210.0 + 15.0;
         float r, g, b;
 
-        float s = 0.5;
+        float s = 0.8;
         float v = 0.8;
         if (iters >= MAX_ITERS) v = 0.0;
         float C = s*v;
